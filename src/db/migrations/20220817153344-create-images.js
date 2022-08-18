@@ -1,22 +1,13 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Favorites', {
+    await queryInterface.createTable('Images', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      user_id: {
-        type: Sequelize.INTEGER,
-      },
-      col_id: {
-        type: Sequelize.INTEGER,
-      },
-      pattern_id: {
-        type: Sequelize.INTEGER,
-      },
-      image_id: {
+      img_url: {
         type: Sequelize.INTEGER,
       },
       createdAt: {
@@ -30,6 +21,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Favorites');
+    await queryInterface.dropTable('Images');
   },
 };

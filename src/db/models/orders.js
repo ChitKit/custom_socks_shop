@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   Orders.init({
     user_id: DataTypes.INTEGER,
-    col: DataTypes.INTEGER,
+    col_id: DataTypes.INTEGER,
     pattern_id: DataTypes.INTEGER,
     image_id: DataTypes.INTEGER,
     complete: DataTypes.BOOLEAN,
