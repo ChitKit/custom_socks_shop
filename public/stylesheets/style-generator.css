@@ -1,0 +1,41 @@
+.textGenerate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.colorBox {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 1);
+    position: relative;
+
+    /* background-color: blue; */
+
+}
+
+.generateMask {
+    border: 2px solid red;
+    width: 400px;
+    box-shadow: inset 0px 0px 200px 0px rgba(0, 0, 0, 5);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 1);
+
+    /* background-color: blue; */
+}
+
+.colorSocks .patternSocks .imagesSocks {
+    width: 400px;
+    height: 400px;
+}
+
+.clolorSocks {
+    width: 400px;
+    background: red;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
