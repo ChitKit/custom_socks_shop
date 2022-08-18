@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
-function FavouritesList({ favourites }) {
+function CurrentFavouritesItem({ favourites }) {
   const [favouritesState, setFavouritesState] = useState(favourites || []);
   const { id } = useParams();
 
@@ -32,4 +32,4 @@ function FavouritesList({ favourites }) {
   );
 }
 
-export default FavouritesList;
+export default CurrentFavouritesItem;

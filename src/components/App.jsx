@@ -2,8 +2,10 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Header from './Header';
 import Main from './Main';
+import FavouritesList from './FavouritesList';
 
-export default function App() {
+export default function App({ favourites }) {
+  console.log(favourites);
   return (
     <>
       <Header />
@@ -11,6 +13,7 @@ export default function App() {
         <div className="max-w-700 center" />
         <Routes>
           <Route path="/" element={<Main />} />
+          <Route path="/favourites" element={<FavouritesList favourites={favourites} />} />
         </Routes>
       </div>
     </>
