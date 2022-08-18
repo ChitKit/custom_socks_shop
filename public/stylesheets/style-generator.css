@@ -1,0 +1,29 @@
+.textGenerate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.colorBox {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    /* background-color: blue; */
+
+}
+
+.generateMask {
+    border: 2px solid red;
+    width: 400px;
+    /* background-color: blue; */
+}
+
+.colorSocks .patternSocks .imagesSocks {
+    width: 100%;
+    height: 100%;
+}
+
+.clolorSocks {
+    background-color: blue;
+}

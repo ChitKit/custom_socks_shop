@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Header from './Header';
 import Main from './Main';
+import SocksGenerator from './SocksGenerator';
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
         <div className="max-w-700 center" />
         <Routes>
           <Route path="/" element={<Main />} />
+          <Route path="/generate" element={<SocksGenerator />} />
         </Routes>
       </div>
     </>
