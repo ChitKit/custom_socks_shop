@@ -3,9 +3,10 @@ import session from 'express-session';
 import store from 'session-file-store';
 import morgan from 'morgan';
 
-import renderMain from './routes/render/renderMain';
+import renderMainRoute from './routes/render/renderMain';
 import renderFavouritesRoute from './routes/render/renderFavourites';
 import renderGenerate from './routes/render/renderGenerator';
+import apiAuthRoute from './routes/api/apiAuth';
 
 const app = express();
 const PORT = process.env.PORT ?? 3000;
@@ -30,7 +31,8 @@ app.use(express.json());
 app.use(morgan('dev'));
 app.use(session(sessionConfig));
 // Routers
-app.use('/', renderMain);
+app.use('/api/auth', apiAuthRoute);
+app.use('/', renderMainRoute);
 app.use('/favourites', renderFavouritesRoute);
 app.use('/generate', renderGenerate);
 

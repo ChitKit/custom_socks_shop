@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function Registration({ setAuthState }) {
+function Login({ setAuthState }) {
   const [inputs, setInputs] = useState({ email: '', password: '' });
   const navigate = useNavigate();
 
@@ -13,24 +13,24 @@ function Registration({ setAuthState }) {
   };
 
   const submitHandler = async (e) => {
-    // e.preventDefault();
-    // const response = await fetch('/api/auth/registration', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify(inputs),
-    // });
-    // if (response.ok) {
-    //   const data = await response.json();
-    //   setAuthState(data);
+    e.preventDefault();
+    const response = await fetch('/api/auth/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(inputs),
+    });
+    if (response.ok) {
+      const data = await response.json();
+      setAuthState(data);
       navigate('/');
-    // }
+    }
   };
 
   return (
     <div>
-      <h1>Registration Page</h1>
+      <h1>Login Page</h1>
       <form onSubmit={submitHandler}>
         <div className="mb-3">
           <label htmlFor="exampleInputEmail1" className="form-label">Email</label>
@@ -40,10 +40,10 @@ function Registration({ setAuthState }) {
           <label htmlFor="exampleInputPassword1" className="form-label">Пароль</label>
           <input name="password" onChange={changeHandler} value={inputs.password} type="password" className="form-control" id="exampleInputPassword1" />
         </div>
-        <button type="submit" className="btn btn-primary">Submit</button>
+        <button type="submit" className="btn btn-primary">Авторизация</button>
       </form>
     </div>
   );
 }
 
-export default Registration;
+export default Login;
