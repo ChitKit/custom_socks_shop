@@ -8,7 +8,9 @@
     "migrate": "npx sequelize-cli db:migrate:undo:all && npx sequelize-cli db:migrate",
     "seed": "npx sequelize-cli db:seed:all",
     "dev": "babel-node src/server.js",
-    "webpack": "webpack -wd eval-source-map"
+    "webpack": "webpack -wd eval-source-map",
+    "build": "webpack && babel src  --copy-files --out-dir distr",
+    "start": "node distr/server.js"
   },
   "repository": {
     "type": "git",
@@ -36,6 +38,7 @@
     "eslint-plugin-react-hooks": "^4.6.0"
   },
   "dependencies": {
+    "@babel/cli": "^7.18.10",
     "bcrypt": "^5.0.1",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
