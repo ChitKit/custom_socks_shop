@@ -16,7 +16,7 @@ export default function Main(authState, setAuthState) {
       <div className="container">
         <div className="img"><img src="images/newImg1.jpeg" className="rounded float-start" alt="..." /></div>
         <div className="mainText">
-          <div className="text-center fs-4 fw-bold">
+          <div className="text-center">
             Самое время быть уникальным!
             Смоделируй свою любимую пару носков!
           </div>
