@@ -3,10 +3,10 @@ import { Routes, Route } from 'react-router-dom';
 import Header from './Header';
 import Main from './Main';
 import FavouritesList from './FavouritesList';
+import FavouritesItem from './FavouritesItem';
 import SocksGenerator from './SocksGenerator';
 
-export default function App({ favourites }) {
-  console.log(favourites);
+export default function App({ favourites, favourite }) {
   return (
     <>
       <Header />
@@ -15,6 +15,7 @@ export default function App({ favourites }) {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/favourites" element={<FavouritesList favourites={favourites} />} />
+          <Route path="/favourites/:id" element={<FavouritesItem favourite={favourite} />} />
           <Route path="/generate" element={<SocksGenerator />} />
         </Routes>
       </div>

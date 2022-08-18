@@ -14,17 +14,15 @@ function FavouritesList({ favourites }) {
   if (!favouritesState) return <div>Загрузка</div>;
 
   return (
-    <div>
+    <div className="favouritesCards">
       <h1>Favourites</h1>
       {favourites.map((el) => (
-        <div key={el.id}>
-          <div className="container text-center">
-            <div className="row">
-              <div className="col">
-                <button type="button" className="btn btn-secondary">FAV</button>
-
-              </div>
-            </div>
+        <div key={el.id} className="card w-20">
+          <img src="../" className="card-img-top" alt="..." />
+          <div className="card-body">
+            <h5 className="card-title" />
+            <p className="card-text">1</p>
+            <a href="#" className="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       ))}

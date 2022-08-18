@@ -32,6 +32,7 @@ app.use(session(sessionConfig));
 // Routers
 app.use('/', renderMain);
 app.use('/favourites', renderFavouritesRoute);
+app.use('/favourites/:id', renderFavouritesRoute);
 app.use('/generate', renderGenerate);
 
 app.listen(PORT, () => console.log(`Server has been started on port: ${PORT}`));

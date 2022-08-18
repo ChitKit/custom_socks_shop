@@ -6,24 +6,21 @@ function FavouritesItem({ favourites }) {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`/api/favourites/${id}`)
+    fetch(`/favourites/${id}`)
       .then((res) => res.json())
-      .then((data) => favouritesItemState(data));
+      .then((data) => setfavouritesItemState(data));
   }, []);
 
   if (!favouritesItemState) return <div>Загрузка</div>;
 
   return (
-    <div>
-      <h1>Detail</h1>
-      <img src={favouritesItemState.avatar} alt={favouritesItemState.name} />
-      <span>
-        {favouritesItemState.name}
-        {' '}
-        aka
-        {' '}
-        {favouritesItemState.git}
-      </span>
+    <div key={el.id} className="card w-20">
+      <img src="../" className="card-img-top" alt="..." />
+      <div className="card-body">
+        <h5 className="card-title" />
+        <p className="card-text">1</p>
+        <a href="#" className="btn btn-primary">Go somewhere</a>
+      </div>
     </div>
   );
 }
