@@ -12,16 +12,24 @@ export default function Main() {
   };
   return (
     <div>
-      <p className="text-center fs-3 fw-bold">
-        Самое время быть уникальным!
-      </p>
-      <p className="text-center fs-3 fw-bold">
-        Смоделируй свою любимую пару носков!
-      </p>
-      <div>
-        <button onClick={Enter} type="button" className="btn btn-dark position-absolute top-50 start-50 translate-middle">Войти</button>
+      <div className="container">
+        <div className="img"><img src="images/newImg1.jpeg" className="rounded float-start" alt="..." /></div>
+        <div className="mainText">
+          <div className="text-center fs-4 fw-bold">
+            Самое время быть уникальным!
+            Смоделируй свою любимую пару носков!
+          </div>
+        </div>
+        <div className="img">
+          <img src="images/newImg2.webp" className="rounded float-end " alt="..." />
+        </div>
+        <div className="img">
+          <img src="images/newImg3.jpeg" className="rounded float-end " alt="..." />
+        </div>
+        <div className="img">
+          <img src="images/newImg4.webp" className="rounded float-end " alt="..." />
+        </div>
       </div>
-
     </div>
   );
 }

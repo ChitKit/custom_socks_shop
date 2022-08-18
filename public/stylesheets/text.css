@@ -1,3 +1,44 @@
-.text {
-    font-weight: 1700;
+html, body {
+    height: 100%;
+}
+
+#root {
+    background-color: pink;
+    height: 100%;
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    flex-wrap: wrap;
+    padding-right: 150px;
+    padding-left: 150px;
+}
+
+.img {
+    /* position: absolute; */
+    border-radius: 10px;
+}
+
+.text-center {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+.mainText {
+    position: relative;
+    background-image:url(/images/imgCenter2.jpeg);
+    height: 550px;
+    width: 450px;
+    background-size: cover;
+    border-radius: 10px;
+    margin-top: 20px;
+    -webkit-text-stroke: 1px black;
+}
+.rounded {
+    width: 250px;
+    height: 300px;
 }
