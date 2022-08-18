@@ -1,14 +1,15 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-export default function Main() {
+export default function Main(authState, setAuthState) {
   const navigate = useNavigate();
   const Enter = async (e) => {
-    // const response = await fetch('/api/auth/logout');
-    // if (response.ok) {
-    //   setAuthState(null);
-    navigate('/enter');
-    // }
+    e.preventDefault();
+    const response = await fetch('/api/auth/logout');
+    if (response.ok) {
+      setAuthState(null);
+      navigate('/enter');
+    }
   };
   return (
     <div>
