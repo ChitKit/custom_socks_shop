@@ -4,6 +4,7 @@ import store from 'session-file-store';
 import morgan from 'morgan';
 
 import renderMain from './routes/render/renderMain';
+import renderFavouritesRoute from './routes/render/renderFavourites';
 
 const app = express();
 const PORT = 3000;
@@ -29,5 +30,6 @@ app.use(morgan('dev'));
 app.use(session(sessionConfig));
 // Routers
 app.use('/', renderMain);
+app.use('/favourites', renderFavouritesRoute);
 
 app.listen(PORT, () => console.log(`Server has been started on port: ${PORT}`));
