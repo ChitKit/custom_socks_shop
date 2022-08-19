@@ -10,8 +10,8 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      this.belongsTo(models.Favorites, { foreignKey: 'col_id' });
-      this.belongsTo(models.Orders, { foreignKey: 'col_id' });
+      this.hasMany(models.Favorites, { foreignKey: 'col_id' });
+      this.hasMany(models.Orders, { foreignKey: 'col_id' });
     }
   }
   Colors.init({

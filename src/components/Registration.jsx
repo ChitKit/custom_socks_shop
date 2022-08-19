@@ -30,10 +30,10 @@ function Registration({ setAuthState }) {
 
   return (
     <div>
-      <h1 className="text-center text-uppercase">Registration Page</h1>
+      <h1 className="text-center text-uppercase registration">Регистрация</h1>
       <form onSubmit={submitHandler}>
         <div className="mb-3">
-          <label htmlFor="exampleInputEmail1" className="form-label">Email</label>
+          <label htmlFor="exampleInputEmail1" className="form-label">Почта</label>
           <input name="email" onChange={changeHandler} value={inputs.email} type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
         </div>
         <div className="mb-3">
@@ -48,7 +48,7 @@ function Registration({ setAuthState }) {
           <label htmlFor="exampleInputName1" className="form-label">Имя</label>
           <input name="first_name" onChange={changeHandler} value={inputs.first_name} type="first_name" className="form-control" id="exampleInputFirstName" />
         </div>
-        <button type="submit" className="btn btn-primary">Submit</button>
+        <button type="submit" className="btn btn-primary">Зарегистрироваться</button>
       </form>
     </div>
   );

@@ -8,25 +8,27 @@ import Registration from './Registration';
 import Login from './Login';
 import Footer from './Footer';
 
-export default function App({ favourites, userSession }) {
+export default function App({
+  colors, images, patterns, favourites, userSession,
+}) {
   const [authState, setAuthState] = useState(userSession || null);
-  console.log(authState, userSession);
-  console.log(favourites);
+  console.log('AUTH =====>', authState, userSession);
+  console.log('FAVORITE =====>', favourites);
+  console.log('CUSTOMIZE =====>', colors, patterns, images);
+  // userId={authState.id}
   return (
     <>
       <Header />
       <div>
-        <div className="max-w-700 center" />
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/reg" element={<Registration setAuthState={setAuthState} />} />
           <Route path="/login" element={<Login setAuthState={setAuthState} />} />
           <Route path="/favourites" element={<FavouritesList favourites={favourites} />} />
-          <Route path="/generate" element={<SocksGenerator />} />
+          <Route path="/generate" element={<SocksGenerator colors={colors} images={images} patterns={patterns} />} />
         </Routes>
         <Footer />
       </div>
     </>
-
   );
 }
