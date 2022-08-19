@@ -9,7 +9,7 @@ module.exports = {
       },
       {
         name: 'Черный',
-        col_url: '#000000',
+        col_url: '#3D3D3D',
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -21,7 +21,7 @@ module.exports = {
       },
       {
         name: 'Розовый',
-        col_url: 'fc0fc0',
+        col_url: '#fc0fc0',
         createdAt: new Date(),
         updatedAt: new Date(),
       },

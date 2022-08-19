@@ -19,6 +19,18 @@ route.get('/', async (req, res) => {
   }
 });
 
+route.post('/', async (req, res) => {
+  console.log(req.body);
+  const {
+    user_id, col_url, pat_url, img_url,
+  } = req.body;
+  try {
+    const newFavor = await Favorites.create({ col_id: {where: col_url}, pat_url, img_url });
+  } catch (err) {
+    console.error(err);
+  }
+});
+
 route.get('/:id', async (req, res) => {
   try {
     const { id } = req.params;

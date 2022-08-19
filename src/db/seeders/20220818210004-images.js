@@ -3,25 +3,25 @@ module.exports = {
     const imgList = [
       {
         name: 'Кактус',
-        img_url: '/images/рис1.png',
+        img_url: '/images/pic1.png',
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
         name: 'Малыш Йода',
-        img_url: '/images/рис2.png',
+        img_url: '/images/pic2.png',
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
         name: 'Уточка',
-        img_url: '/images/рис3.png',
+        img_url: '/images/pic3.png',
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
         name: 'Альпака',
-        img_url: '/images/рис4.png',
+        img_url: '/images/pic4.png',
         createdAt: new Date(),
         updatedAt: new Date(),
       },
