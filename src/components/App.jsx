@@ -18,11 +18,11 @@ export default function App({
   // userId={authState.id}
   return (
     <>
-      <Header />
+      <Header setAuthState={setAuthState} authState={authState} />
       <div>
         <Routes>
           <Route path="/" element={<Main />} />
-          <Route path="/reg" element={<Registration setAuthState={setAuthState} />} />
+          <Route path="/registration" element={<Registration setAuthState={setAuthState} />} />
           <Route path="/login" element={<Login setAuthState={setAuthState} />} />
           <Route path="/favourites" element={<FavouritesList favourites={favourites} />} />
           <Route path="/generate" element={<SocksGenerator colors={colors} images={images} patterns={patterns} />} />

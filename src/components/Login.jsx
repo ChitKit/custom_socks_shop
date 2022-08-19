@@ -30,7 +30,7 @@ function Login({ setAuthState }) {
 
   return (
     <div>
-      <h1>Вход</h1>
+      <h1 className="text-center text-uppercase registration">Вход</h1>
       <form onSubmit={submitHandler}>
         <div className="mb-3">
           <label htmlFor="exampleInputEmail1" className="form-label">Почта</label>

@@ -41,12 +41,12 @@ function Registration({ setAuthState }) {
           <input name="password" onChange={changeHandler} value={inputs.password} type="password" className="form-control" id="exampleInputPassword1" />
         </div>
         <div className="mb-3">
-          <label htmlFor="exampleInputSurname1" className="form-label">Фамилия</label>
-          <input name="second_name" onChange={changeHandler} value={inputs.second_name} type="second_name" className="form-control" id="exampleInputSecondName" />
+          <label htmlFor="exampleInputSecondName1" className="form-label">Фамилия</label>
+          <input name="second_name" onChange={changeHandler} value={inputs.second_name} type="text" className="form-control" id="exampleInputSecondName" />
         </div>
         <div className="mb-3">
           <label htmlFor="exampleInputName1" className="form-label">Имя</label>
-          <input name="first_name" onChange={changeHandler} value={inputs.first_name} type="first_name" className="form-control" id="exampleInputFirstName" />
+          <input name="first_name" onChange={changeHandler} value={inputs.first_name} type="text" className="form-control" id="exampleInputFirstName" />
         </div>
         <button type="submit" className="btn btn-primary">Зарегистрироваться</button>
       </form>

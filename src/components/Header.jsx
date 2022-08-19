@@ -6,7 +6,7 @@ function Header({ authState, setAuthState }) {
   console.log(authState);
   const logoutHandler = async (e) => {
     e.preventDefault();
-    const response = await fetch('/auth/logout');
+    const response = await fetch('/api/auth/logout');
     if (response.ok) {
       setAuthState(null);
       navigate('/');
@@ -15,7 +15,7 @@ function Header({ authState, setAuthState }) {
   return (
     <header role="banner" className="headerContainer">
       <nav className="navbar navbar-expand-lg bg-green">
-        {!authState
+        {!authState?.email
           ? (
             <div className="container-fluid">
               <NavLink className="navbar-brand" to="/">
@@ -25,7 +25,7 @@ function Header({ authState, setAuthState }) {
               <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
                   <li className="nav-item">
-                    <NavLink className="nav-link" to="/reg">Registration</NavLink>
+                    <NavLink className="nav-link" to="/registration">Registration</NavLink>
                   </li>
                   <li className="nav-item">
                     <NavLink className="nav-link" to="/login">Login</NavLink>
@@ -50,7 +50,7 @@ function Header({ authState, setAuthState }) {
                     <NavLink className="nav-link" to="/favourites">Favourites</NavLink>
                   </li>
                   <li className="nav-item">
-                    <li className="nav-link"><a id="login" onClick={logoutHandler} href="...">Log out</a></li>
+                    <li className="nav-link"><a id="login" onClick={logoutHandler} href="">Log out</a></li>
                   </li>
                 </ul>
               </div>

@@ -17,12 +17,10 @@ export default function Footer() {
 
                 <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                   <h6 className="text-uppercase mb-4 font-weight-bold">
-                    Company name
+                    О нас
                   </h6>
                   <p>
-                    Here you can use rows and columns to organize your footer
-                    content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                    elit.
+                    Создаем кастомные носки с 2022 года для вас!
                   </p>
                 </div>
 
@@ -33,7 +31,7 @@ export default function Footer() {
                 <hr className="w-100 clearfix d-md-none" />
 
                 <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                  <h6 className="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                  <h6 className="text-uppercase mb-4 font-weight-bold">Контакты</h6>
                   <p>
                     <i className="fas fa-home mr-3" />
                     {' '}
