@@ -12,12 +12,11 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       this.belongsTo(models.Favorites, { foreignKey: 'col_id' });
       this.belongsTo(models.Orders, { foreignKey: 'col_id' });
-
     }
   }
   Colors.init({
     name: DataTypes.STRING,
-    col_url: DataTypes.INTEGER,
+    col_url: DataTypes.STRING,
   }, {
     sequelize,
     modelName: 'Colors',

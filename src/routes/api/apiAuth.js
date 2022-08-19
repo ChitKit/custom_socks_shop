@@ -1,16 +1,20 @@
 import express from 'express';
 import bcrypt from 'bcrypt';
-import { User } from '../../db/models';
+import { Users } from '../../db/models';
 
 const route = express.Router();
+
+route.get('/registration', (req, res) => {
+  res.redirect('/registration');
+});
 
 route.post('/registration', async (req, res) => {
   const { email, password } = req.body;
   const hashPassword = await bcrypt.hash(password, 10);
   try {
-    const user = await User.findOne({ where: { email } });
+    const user = await Users.findOne({ where: { email } });
     if (!user) {
-      const newUser = await User.create({ email, password: hashPassword });
+      const newUser = await Users.create({ email, password: hashPassword });
       req.session.userSession = { email: newUser.email };
       return res.json({ email: newUser.email });
     }
@@ -23,7 +27,7 @@ route.post('/registration', async (req, res) => {
 route.post('/login', async (req, res) => {
   const { email, password } = req.body;
   try {
-    const user = await User.findOne({ where: { email } });
+    const user = await Users.findOne({ where: { email } });
     if (user) {
       const checkPass = await bcrypt.compare(password, user.password); // возвращает boolean значение
       if (checkPass) {

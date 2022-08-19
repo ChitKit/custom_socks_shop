@@ -16,7 +16,7 @@ function Header() {
                 <NavLink className="nav-link" to="/generate">Socks Generator</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/registration">Registration</NavLink>
+                <NavLink className="nav-link" to="/reg">Registration</NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/login">Login</NavLink>
