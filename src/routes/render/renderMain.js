@@ -8,7 +8,7 @@ const route = express.Router();
 
 route.get('/', async (req, res) => {
   try {
-    const initState = { path: req.originalUrl };
+    const initState = { path: req.originalUrl, userSession: req.session.userSession };
     const colors = await Colors.findAll();
     const images = await Images.findAll();
     const patterns = await Patterns.findAll();
@@ -25,7 +25,7 @@ route.get('/', async (req, res) => {
   }
 });
 
-route.get('/reg', async (req, res) => {
+route.get('/registration', async (req, res) => {
   try {
     const initState = { path: req.originalUrl, userSession: req.session.userSession };
     const html = renderToString(<Layout initState={initState} />);

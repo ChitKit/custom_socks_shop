@@ -1,16 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-export default function Main(authState, setAuthState) {
-  const navigate = useNavigate();
-  const Enter = async (e) => {
-    e.preventDefault();
-    const response = await fetch('/api/auth/logout');
-    if (response.ok) {
-      setAuthState(null);
-      navigate('/enter');
-    }
-  };
+export default function Main() {
   return (
     <div>
       <div className="container">
