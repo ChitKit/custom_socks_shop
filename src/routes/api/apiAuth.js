@@ -9,12 +9,12 @@ route.get('/registration', (req, res) => {
 });
 
 route.post('/registration', async (req, res) => {
-  const { email, password } = req.body;
+  const { email, password, second_name, first_name } = req.body;
   const hashPassword = await bcrypt.hash(password, 10);
   try {
     const user = await Users.findOne({ where: { email } });
     if (!user) {
-      const newUser = await Users.create({ email, password: hashPassword });
+      const newUser = await Users.create({ email, password: hashPassword, second_name, first_name });
       req.session.userSession = { email: newUser.email };
       return res.json({ email: newUser.email });
     }
