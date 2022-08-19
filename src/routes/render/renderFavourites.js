@@ -25,7 +25,7 @@ route.post('/', async (req, res) => {
     user_id, col_url, pat_url, img_url,
   } = req.body;
   try {
-    const newFavor = await Favorites.create({ col_id: {where: col_url}, pat_url, img_url });
+    const newFavor = await Favorites.create({ col_url, pat_url, img_url });
   } catch (err) {
     console.error(err);
   }

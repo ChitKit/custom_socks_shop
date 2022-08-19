@@ -6,7 +6,7 @@ export default function SocksGenerator({
 }) {
   console.log({ images, patterns, colors });
   const [customize, setCustomize] = useState({
-    user_id: '', col_url: '/', pat_url: '2', img_url: '3',
+    user_id: '', colour: { col_url: '#ffffff', col_id: '' }, patern: { pat_url: '/images/2.png', pattern_id: '' }, imge: { img_url: '/images/pic2.png', image_id: '' },
   });
   const navigate = useNavigate();
   console.log(customize);
@@ -27,19 +27,19 @@ export default function SocksGenerator({
 
   const colorHandler = (color) => {
     setCustomize((prev) => ({
-      ...prev, col_url: color.col_url,
+      ...prev, colour: { col_url: color.col_url, col_id: color.id },
     }));
   };
 
   const imageHandler = (image) => {
     setCustomize((prev) => ({
-      ...prev, img_url: image.img_url,
+      ...prev, imge: { img_url: image.img_url, image_id: image.id },
     }));
   };
 
   const patternHandler = (pattern) => {
     setCustomize((prev) => ({
-      ...prev, pat_url: pattern.pat_url,
+      ...prev, patern: { pat_url: pattern.pat_url, pattern_id: pattern.id },
     }));
   };
 
@@ -79,9 +79,9 @@ export default function SocksGenerator({
 
         <div className="colorBox">
           <img className="generateMask" src="/images/socks_mask.png" alt="Emply socks mask" />
-          <div className="imagesSocks"><img className="imagesSocks" src={customize.img_url ?? '/images/pic4.png'} alt={customize.img_url} /></div>
-          <div className="colorSocks" style={{ backgroundColor: customize.col_url }} />
-          <div className="patternSocks"><img className="patternSocks" src={customize.pat_url} alt={customize} /></div>
+          <div className="imagesSocks"><img className="imagesSocks" src={customize.imge.img_url ?? '/images/pic4.png'} alt={customize.imge.img_url} /></div>
+          <div className="colorSocks" style={{ backgroundColor: customize.colour.col_url ?? 'red' }} />
+          <div className="patternSocks"><img className="patternSocks" src={customize.patern.pat_url ?? '/images/2.png'} alt={customize.patern.pat_url} /></div>
 
         </div>
         <div>
