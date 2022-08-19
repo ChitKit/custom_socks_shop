@@ -25,7 +25,7 @@ export default function App({
           <Route path="/reg" element={<Registration setAuthState={setAuthState} />} />
           <Route path="/login" element={<Login setAuthState={setAuthState} />} />
           <Route path="/favourites" element={<FavouritesList favourites={favourites} />} />
-          <Route path="/generate" element={<SocksGenerator colors={colors} images={images} patterns={patterns} />} />
+          <Route path="/generate" element={<SocksGenerator user_id="1" colors={colors} images={images} patterns={patterns} />} />
         </Routes>
         <Footer />
       </div>

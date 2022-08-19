@@ -21,11 +21,14 @@ route.get('/', async (req, res) => {
 
 route.post('/', async (req, res) => {
   console.log(req.body);
+  
   const {
-    user_id, col_url, pat_url, img_url,
+    user_id, col_id, pattern_id, image_id,
   } = req.body;
   try {
-    const newFavor = await Favorites.create({ col_url, pat_url, img_url });
+    const newFavor = await Favorites.create({
+      user_id, col_id, pattern_id, image_id,
+    });
   } catch (err) {
     console.error(err);
   }

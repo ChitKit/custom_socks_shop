@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export default function SocksGenerator({
-  images, patterns, colors,
+  user_id, images, patterns, colors,
 }) {
   console.log({ images, patterns, colors });
   const [customize, setCustomize] = useState({
@@ -18,7 +18,9 @@ export default function SocksGenerator({
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(customize),
+      body: JSON.stringify({
+        user_id, col_id: customize.colour.col_id, pattern_id: customize.patern.pattern_id, image_id: customize.imge.image_id,
+      }),
     });
     if (response.ok) {
       navigate('/favourites');
