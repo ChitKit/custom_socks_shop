@@ -1,8 +1,8 @@
 html,
 body {
     background-color: pink;
+    
 }
-
 
 .container {
     display: flex;
@@ -25,6 +25,15 @@ body {
     transform: translate(-50%, -50%);
     color: white;
     text-align: center;
+    background-color: #A5DFF2;
+    margin-left: 0px;
+    margin-right: 15px;
+    border-radius: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: x-large;
+    font-weight: 600;
+    
+    
 }
 
 .mainText {
@@ -43,9 +52,24 @@ body {
 }
 
 .text-center {
-    background-color: black;
+    background-color: #A5DFF2;
     margin-left: 0px;
     margin-right: 15px;
     border-radius: 10px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.mainFooter {
+    display: flex;
+}
+
+.footerContainer {
+    position: absolute;
+    background-color: #60A669;
+    margin-top: 850px;
+    margin-bottom: 0px;
+    width: 100%;
+}
+
+.headerContainer {
+    background-color: #BDF2C4;
 }

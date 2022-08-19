@@ -6,6 +6,7 @@ import FavouritesList from './FavouritesList';
 import SocksGenerator from './SocksGenerator';
 import Registration from './Registration';
 import Login from './Login';
+import Footer from './Footer';
 
 export default function App({
   colors, images, patterns, favourites, userSession,
@@ -26,6 +27,7 @@ export default function App({
           <Route path="/favourites" element={<FavouritesList favourites={favourites} />} />
           <Route path="/generate" element={<SocksGenerator colors={colors} images={images} patterns={patterns} />} />
         </Routes>
+        <Footer />
       </div>
     </>
   );
