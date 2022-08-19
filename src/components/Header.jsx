@@ -50,7 +50,7 @@ function Header({ authState, setAuthState }) {
                     <NavLink className="nav-link" to="/favourites">Favourites</NavLink>
                   </li>
                   <li className="nav-item">
-                    <li className="nav-link"><a id="login" onClick={logoutHandler} href="">Log out</a></li>
+                    <a className="nav-link" id="login" onClick={logoutHandler} href="">Log out</a>
                   </li>
                 </ul>
               </div>
