@@ -6,6 +6,7 @@ import FavouritesList from './FavouritesList';
 import SocksGenerator from './SocksGenerator';
 import Registration from './Registration';
 import Login from './Login';
+import Footer from './Footer';
 
 export default function App({ favourites, userSession }) {
   const [authState, setAuthState] = useState(userSession || null);
@@ -23,6 +24,7 @@ export default function App({ favourites, userSession }) {
           <Route path="/favourites" element={<FavouritesList favourites={favourites} />} />
           <Route path="/generate" element={<SocksGenerator />} />
         </Routes>
+        <Footer />
       </div>
     </>
 

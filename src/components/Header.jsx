@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 function Header() {
   return (
-    <header role="banner" className="bg-white">
+    <header role="banner" className="headerContainer">
       <nav className="navbar navbar-expand-lg bg-green">
         <div className="container-fluid">
           <NavLink className="navbar-brand" to="/">
