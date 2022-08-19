@@ -1,8 +1,8 @@
 html, body {
     /* height: 100%; */
     background-color: pink;
+    
 }
-
 
 .container {
     display: flex;
@@ -25,6 +25,15 @@ html, body {
     transform: translate(-50%, -50%);
     color: white;
     text-align: center;
+    background-color: #A5DFF2;
+    margin-left: 0px;
+    margin-right: 15px;
+    border-radius: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: x-large;
+    font-weight: 600;
+    
+    
 }
 .mainText {
     position: relative;
@@ -39,10 +48,18 @@ html, body {
     width: 250px;
     height: 300px;
 }
-.text-center {
-    background-color: black;
-    margin-left: 0px;
-    margin-right: 15px;
-    border-radius: 10px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+.mainFooter {
+    display: flex;
+}
+
+.footerContainer {
+    position: absolute;
+    background-color: #60A669;
+    margin-top: 850px;
+    margin-bottom: 0px;
+    width: 100%;
+}
+
+.headerContainer {
+    background-color: #BDF2C4;
 }
