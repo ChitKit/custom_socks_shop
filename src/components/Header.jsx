@@ -3,7 +3,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 
 function Header({ authState, setAuthState }) {
   const navigate = useNavigate();
-  console.log(authState);
+  console.log('authstate in header', authState);
   const logoutHandler = async (e) => {
     e.preventDefault();
     const response = await fetch('/api/auth/logout');

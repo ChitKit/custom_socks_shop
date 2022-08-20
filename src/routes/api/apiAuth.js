@@ -34,7 +34,7 @@ route.post('/login', async (req, res) => {
   const { email, password } = req.body;
   try {
     const user = await Users.findOne({ where: { email } });
-    console.log('BACK USER ====>', res.json(user.id));
+    // console.log('BACK USER ====>', user.id);
     if (user) {
       const checkPass = await bcrypt.compare(password, user.password); // возвращает boolean значение
       if (checkPass) {
