@@ -10,17 +10,19 @@ route.get('/registration', (req, res) => {
 
 route.post('/registration', async (req, res) => {
   const {
-    email, password, second_name, first_name,
+    email, password, secondName, firstName,
   } = req.body;
   const hashPassword = await bcrypt.hash(password, 10);
   try {
     const user = await Users.findOne({ where: { email } });
     if (!user) {
       const newUser = await Users.create({
-        email, password: hashPassword, first_name, second_name,
+        email, password: hashPassword, secondName, firstName,
       });
+      console.log('BACK CREATE USER ====>', res.json(newUser.id));
+
       req.session.userSession = { email: newUser.email };
-      return res.json({ email: newUser.email });
+      return res.json({ email: newUser.email, id: newUser.id });
     }
     res.status(400).json({ message: 'Такой email уже занят' });
   } catch (err) {
@@ -32,11 +34,12 @@ route.post('/login', async (req, res) => {
   const { email, password } = req.body;
   try {
     const user = await Users.findOne({ where: { email } });
+    console.log('BACK USER ====>', res.json(user.id));
     if (user) {
       const checkPass = await bcrypt.compare(password, user.password); // возвращает boolean значение
       if (checkPass) {
-        req.session.userSession = { email: user.email };
-        return res.json({ email: user.email });
+        req.session.userSession = { email: user.email, id: user.id };
+        return res.json({ email: user.email, id: user.id });
       }
     }
     res.status(400).json({ message: 'Email или пароль не верны' });

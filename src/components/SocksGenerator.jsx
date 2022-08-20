@@ -4,12 +4,12 @@ import { useNavigate } from 'react-router-dom';
 export default function SocksGenerator({
   images, patterns, colors,
 }) {
-  console.log({ images, patterns, colors });
+  // console.log({ images, patterns, colors });
   const [customize, setCustomize] = useState({
-    user_id: '', colour: { col_url: '#ffffff', col_id: '' }, patern: { pat_url: '/images/2.png', pattern_id: '' }, imge: { img_url: '/images/pic2.png', image_id: '' },
+    user_id: '', colour: { col_url: '#FDFFC7', col_id: '' }, patern: { pat_url: '/images/2.png', pattern_id: '' }, imge: { img_url: '/images/pic2.png', image_id: '' },
   });
   const navigate = useNavigate();
-  console.log(customize);
+  // console.log(customize);
 
   const addedFavorite = async (e) => {
     e.preventDefault();
@@ -43,7 +43,7 @@ export default function SocksGenerator({
     }));
   };
 
-  console.log(customize);
+  // console.log(customize);
   return (
     <>
       <h1>Создай свой дизайн носков!</h1>

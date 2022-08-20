@@ -9,12 +9,12 @@ import Login from './Login';
 import Footer from './Footer';
 
 export default function App({
-  colors, images, patterns, favourites, userSession,
+  colors, images, patterns, favourites, userSession, user_id,
 }) {
   const [authState, setAuthState] = useState(userSession || null);
-  console.log('AUTH =====>', authState, userSession);
-  console.log('FAVORITE =====>', favourites);
-  console.log('CUSTOMIZE =====>', colors, patterns, images);
+  // console.log('AUTH =====>', authState, userSession.id);
+  console.log('user_id =====>', user_id);
+  // console.log('CUSTOMIZE =====>', colors, patterns, images);
   // userId={authState.id}
   return (
     <>

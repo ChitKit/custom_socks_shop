@@ -3,7 +3,7 @@ module.exports = {
     const colLost = [
       {
         name: 'Белый',
-        col_url: '#ffffff',
+        col_url: '#FDFFC7',
         createdAt: new Date(),
         updatedAt: new Date(),
       },
