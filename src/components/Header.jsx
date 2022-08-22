@@ -3,7 +3,6 @@ import { NavLink, useNavigate } from 'react-router-dom';
 
 function Header({ authState, setAuthState }) {
   const navigate = useNavigate();
-  console.log('authstate in header', authState);
   const logoutHandler = async (e) => {
     e.preventDefault();
     const response = await fetch('/api/auth/logout');
@@ -20,15 +19,15 @@ function Header({ authState, setAuthState }) {
             <div className="container-fluid">
               <NavLink className="navbar-brand" to="/">
                 <img src="/images/logo.png" alt="" width="30" height="30" className="d-inline-block align-text-top" />
-                Custom Socks
+                Магазин кастомных носков
               </NavLink>
               <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
                   <li className="nav-item">
-                    <NavLink className="nav-link" to="/registration">Registration</NavLink>
+                    <NavLink className="nav-link" to="/registration">Регистрация</NavLink>
                   </li>
                   <li className="nav-item">
-                    <NavLink className="nav-link" to="/login">Login</NavLink>
+                    <NavLink className="nav-link" to="/login">Войти</NavLink>
                   </li>
                 </ul>
               </div>
@@ -38,19 +37,19 @@ function Header({ authState, setAuthState }) {
           : (
             <div className="container-fluid">
               <NavLink className="navbar-brand" to="/">
-                <img src="/images/logo.png" alt="" width="30" height="30" className="d-inline-block align-text-top" />
-                Custom Socks
+                <img src="/images/logo.png" alt="" width="50" height="50" className="d-inline-block align-text-top" />
+                Магазин кастомных носков
               </NavLink>
               <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
                   <li className="nav-item">
-                    <NavLink className="nav-link" to="/generate">Socks Generator</NavLink>
+                    <NavLink className="nav-link" to="/generate">Генератор носков</NavLink>
                   </li>
                   <li className="nav-item">
-                    <NavLink className="nav-link" to="/favourites">Favourites</NavLink>
+                    <NavLink className="nav-link" to="/favourites">Избранное</NavLink>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" id="login" onClick={logoutHandler} href="">Log out</a>
+                    <a className="nav-link" id="login" onClick={logoutHandler} href="">Выйти</a>
                   </li>
                 </ul>
               </div>

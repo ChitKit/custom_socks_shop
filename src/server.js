@@ -9,6 +9,8 @@ import renderGenerate from './routes/render/renderGenerator';
 import apiAuthRoute from './routes/api/apiAuth';
 import apiSocks from './routes/api/apiSocks';
 
+import authCheck from './middlewares/authChecker';
+
 const app = express();
 const PORT = process.env.PORT ?? 3000;
 
@@ -34,8 +36,9 @@ app.use(session(sessionConfig));
 // Routers
 app.use('/api/auth', apiAuthRoute);
 app.use('/', renderMainRoute);
+app.use('/api/socks', apiSocks);
+app.use(authCheck);
 app.use('/favourites', renderFavouritesRoute);
 app.use('/generate', renderGenerate);
-app.use('/api/socks', apiSocks);
 
 app.listen(PORT, () => console.log(`Server has been started on port: ${PORT}`));
