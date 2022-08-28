@@ -8,7 +8,6 @@ export default function Footer() {
         <footer
           className="text-center text-lg-start text-white footerContainer"
         >
-
           <div className="container p-4 pb-0">
 
             <section className="">
@@ -19,9 +18,6 @@ export default function Footer() {
                   <h6 className="text-uppercase mb-4 font-weight-bold">
                     О нас
                   </h6>
-                  <p>
-                    Создаем кастомные носки с 2022 года для вас!
-                  </p>
                 </div>
 
                 <hr className="w-100 clearfix d-md-none" />
@@ -31,22 +27,7 @@ export default function Footer() {
                 <hr className="w-100 clearfix d-md-none" />
 
                 <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                  <h6 className="text-uppercase mb-4 font-weight-bold">Контакты</h6>
-                  <p>
-                    <i className="fas fa-home mr-3" />
-                    {' '}
-                    г. Москва, Шоссе Энтузиастов 12 ст.2
-                  </p>
-                  <p>
-                    <i className="fas fa-envelope mr-3" />
-                    {' '}
-                    info@enjoysocks.ru
-                  </p>
-                  <p>
-                    <i className="fas fa-phone mr-3" />
-                    {' '}
-                    + 11 111-11-11
-                  </p>
+                  <h6 className="text-uppercase mb-4 font-weight-bold">Контакты:</h6>
                 </div>
 
               </div>
@@ -57,7 +38,6 @@ export default function Footer() {
 
             <section className="p-3 pt-0">
               <div className="row d-flex align-items-center">
-
 
                 <div className="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
 
