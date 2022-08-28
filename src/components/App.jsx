@@ -27,8 +27,8 @@ export default function App({
           <Route path="/favourites" element={<FavouritesList favourites={favourites} />} />
           <Route path="/generate" element={<SocksGenerator colors={colors} images={images} patterns={patterns} />} />
         </Routes>
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 }
